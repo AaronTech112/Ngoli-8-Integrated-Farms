@@ -68,7 +68,7 @@
       <h6 class="card-text text-center ">Course Description</h6>
       <p class="text-center">Discover the secrets to establishing and managing a profitable snail farm.</p>
     </div>
-    <a name="" id="" class="btn btn-success m-3 text-light" href="#" role="button">Register</a>
+    <a name="" type="button" id="" class="btn btn-success m-3 text-light" href="#" role="button"  data-bs-toggle="modal" data-bs-target="#modalId">Register</a>
   </div>
 
   <div class="card border-dark justify-content-center m-3 bg-light">
@@ -78,7 +78,7 @@
       <h6 class="card-text text-center ">Course Description</h6>
       <p class="text-center">Discover the secrets to establishing and managing a profitable snail farm.</p>
     </div>
-    <a name="" id="" class="btn btn-success m-3 text-light" href="#" role="button">Register</a>
+    <a name="" type="button" id="" class="btn btn-success m-3 text-light" href="#" role="button"  data-bs-toggle="modal" data-bs-target="#modalId">Register</a>
   </div>
 
   <div class="card border-dark justify-content-center m-3 bg-light">
@@ -88,7 +88,7 @@
       <h6 class="card-text text-center ">Course Description</h6>
       <p class="text-center">Discover the secrets to establishing and managing a profitable snail farm.</p>
     </div>
-    <a name="" id="" class="btn btn-success m-3 text-light" href="#" role="button">Register</a>
+    <a name="" type="button" id="" class="btn btn-success m-3 text-light" href="#" role="button"  data-bs-toggle="modal" data-bs-target="#modalId">Register</a>
   </div>
 
   <div class="card border-dark justify-content-center m-3 bg-light">
@@ -98,9 +98,59 @@
       <h6 class="card-text text-center ">Course Description</h6>
       <p class="text-center">Discover the secrets to establishing and managing a profitable snail farm.</p>
     </div>
-    <a name="" id="" class="btn btn-success m-3 text-light" href="#" role="button">Register</a>
+    <a name="" type="button" id="" class="btn btn-success m-3 text-light" href="#" role="button"  data-bs-toggle="modal" data-bs-target="#modalId">Register</a>
   </div>
-  
+<!-- Modal Body -->
+<!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+<div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title text-white" id="modalTitleId">Course Registration Form</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="f-name" class="form-label">First Name</label>
+          <input type="text" name="" id="f-name" class="form-control" placeholder="" aria-describedby="helpId">
+          <small id="helpId" class="text-muted">Enter Your Full Name Here</small>
+        </div>
+        <div class="mb-3">
+          <label for="emaill" class="form-label">Email</label>
+          <input type="email" class="form-control" name="" id="emaill" aria-describedby="emailHelpId" placeholder="abc@mail.com">
+          <small id="emailHelpId" class="form-text text-muted">Enter Your Valid Email Here</small>
+        </div>
+        <div class="mb-3">
+          <label for="tell" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" name="" id="tell" aria-describedby="emailHelpId" placeholder="Include Country Code e.g (+234)">
+          <small id="emailHelpId" class="form-text text-muted">Enter A Valid Phone Number With Country Code</small>
+        </div>
+        <div class="mb-3">
+          <label for="course_select" class="form-label">Courses</label>
+          <select class="form-select form-select-lg" name="" id="course_select">
+            <option value="">Select a Course</option>
+            <option value="">Fish Farm Practice Training</option>
+            <option value="">Poultry Farm Practice Training</option>
+            <option value="">Snail Farm Practice Training</option>
+            <option value="">Pig Farm Practice Training</option>
+            <option value="">Vet Consultancy Training</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-white text-white bg-danger" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-white text-white bg-success">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Optional: Place to the bottom of scripts -->
+<script>
+  const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
+
+</script>
   <!-- <div class="courses-section">
     <h2 class="section-title">Online Courses</h2>
     <p class="section-description">Explore our range of training courses on fish, snail, and poultry farm practices.</p>
